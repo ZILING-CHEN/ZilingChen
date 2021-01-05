@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universe</title>
+    <style>
+        html,body{
+            height:100%;
+            overflow:hidden;
+        }
+        #universe{
+            background:radial-gradient(#555,#000);
+        }
+        @keyframes starflash{
+            from {opacity:1;}
+            to {opacity:0.3;}
+        }
+        #stars{
+            height:100%;
+            background-image:url("images/night-sky-star.png");
+            background-size:cover; 
+            animation:starflash 3s infinite alternate;
+            width:100%;
+            
+        }
+        @keyframes sunlight{
+            from{box-shadow: 0 0 5px #f5c91a;}
+            to{box-shadow: 0 0 30px #f5c91a;}
+        }
+        #sun{
+            width: 100px;
+            height: 100px;
+            /* border:1px solid red; */
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin-top:-50px;
+            margin-left:-50px;
+            border-radius: 50%;
+            background-color:yellow;
+            text-align:center;
+            animation:sunlight 2s infinite alternate;
+        }
+        @keyframes ball1flash{
+            from{transform:rotate(0);}
+            to{transform:rotate(360deg);}
+        }
+        #ball1-orbit{
+            width: 150px;
+            height: 150px;
+            /* border:1px solid red; */
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin-top:-75px; 
+            margin-left:-75px;
+            border-radius: 50%;
+            animation:ball1flash 5s linear infinite ;
+        }
+        #ball1{
+            width: 50px;
+            position:absolute;
+            margin:-25px;
+            top:50%;
+        }
+        @keyframes ball2flash{
+            from{transform:rotate(0);}
+            to{transform:rotate(360deg);}
+        }
+        #ball2-orbit{
+            width: 250px;   
+            height: 250px;
+            /* border:1px solid red; */
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-125px;
+            animation:ball2flash 10s linear infinite ;
+            border-radius:50%;
+
+        }
+        #ball2{
+            width: 50px;
+            height: 45px;
+            position:absolute;
+            top:50%;
+            margin: -25px;            
+        }
+        @keyframes ball3flash{
+            from{transform:rotate(0)}
+            to{transform:rotate(360deg);}
+        }
+        #ball3-orbit{
+            width: 350px;
+            height: 350px;
+            border:1px solid white;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-175px;
+            animation:ball3flash 20s linear infinite;
+            border-radius:50%;
+        }
+        #ball3{
+            width: 50px;
+            height: 50px;
+            position:absolute;
+            margin:-25px;
+            top:50%;
+        }
+        @keyframes ball4flash{
+            from{transform:rotate(0)}
+            to{transform:rotate(360deg);}
+        }
+        #ball4-orbit{
+            width: 450px;
+            height: 450px;
+            border:1px solid white;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-225px;
+            animation:ball4flash 23s linear infinite;
+            border-radius:50%;
+        }
+        #ball4{
+            width: 50px;
+            height: 50px;
+            top:50%;
+            position:absolute;
+            margin:-25px;
+        }
+        @keyframes ball5flash{
+            from{transform:rotate(0)}
+            to{transform:rotate(360deg);}
+        }
+        #ball5-orbit{
+            width: 550px;
+            height: 550px;
+            border:1px solid white;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-275px;
+            animation:ball5flash 35s linear infinite;
+            border-radius:50%;
+        }
+        #ball5{
+            width: 50px;
+            height: 50px;
+            top:50%;
+            position:absolute;
+            margin:-25px;
+        }
+        @keyframes ball6flash{
+            from{transform:rotate(0)}
+            to{transform:rotate(360deg);}
+        }
+        #ball6-orbit{
+            width: 650px;
+            height: 650px;
+            border:1px solid white;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-325px;
+            animation:ball6flash 10s linear infinite;
+            border-radius:50%;
+        }
+        #ball6{
+            width: 50px;
+            height: 50px;
+            top:50%;
+            position:absolute;
+            margin:-25px;
+        }
+        @keyframes ball7flash{
+            from{transform:rotate(0)}
+            to{transform:rotate(360deg)}
+        }
+        #ball7-orbit{
+            width: 750px;
+            height: 750px;
+            border: 1px solid white;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-375px;
+            animation:ball7flash 40s linear infinite;
+            border-radius:50%;
+        }
+        #ball7{
+            width: 50px;
+            height: 50px;
+            position:absolute;
+            top:50%;
+            margin:-25px;
+        }
+        @keyframes ball8flash{
+            from{transform:rotate(0)}
+            to{transform:rotate(360deg)}
+        }
+        #ball8-orbit{
+            width: 850px;
+            height: 850px;
+            border:1px solid white;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:-425px;
+            animation:ball8flash 40s linear infinite;
+            border-radius:50%;
+        }
+        #ball8{
+            width: 50px;
+            height: 50px;
+            top:50%;
+            position:absolute;
+            margin:-25px;
+        }
+    </style>
+</head>
+<body id="universe">
+    <div id="stars"></div>
+    <div id="sun">sun</div>
+    <div id="ball1-orbit" >
+        <img src="images/socerbell.png" id="ball1" alt="">ball1
+    </div>
+    <div id="ball2-orbit" >
+        <img src="images/socerbell.png" id="ball2" alt="">
+    </div>
+    <div id="ball3-orbit">
+        <img src="images/earth.png" id="ball3"alt="">
+    </div>
+    <div id="ball4-orbit">
+        <img src="images/socerbell.png" id="ball4" alt="">
+    </div>
+    <div id="ball5-orbit">
+        <img src="images/socerbell.png" id="ball5" alt="">
+    </div>
+    <div id="ball6-orbit">
+        <img src="images/socerbell.png" id="ball6" alt="">
+    </div>
+    <div id="ball7-orbit">
+        <img src="images/socerbell.png" id="ball7" alt="">
+    </div>
+    <div id="ball8-orbit">
+        <img src="images/socerbell.png" id="ball8" alt="">
+    </div>
+    <div id="ball9-orbit">
+        <img src="images/socerbell.png" id="ball9" alt="">
+    </div>
+</body> 
+</html>
